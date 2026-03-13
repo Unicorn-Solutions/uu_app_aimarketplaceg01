@@ -1,0 +1,37 @@
+---
+description: Conventions for app/abl/**/*-abl.js use case files
+globs: **/app/abl/**/*-abl.js
+alwaysApply: false
+---
+
+# ABL Files
+
+Apply these conventions to every `app/abl/**/*-abl.js` file.
+
+## Structure
+
+- Use `"use strict";` at the top of the file.
+- Keep one use case per file (`create-abl.js`, `get-abl.js`, etc.).
+- Export a singleton instance: `module.exports = new <UseCase>Abl();`.
+- Load validator in constructor: `this.validator = Validator.load();`.
+- Resolve DAOs via `DaoFactory.getDao("<schema>")` in constructor.
+
+## Method Conventions
+
+- Method signature for entity uuCmds: `async <useCase>(awid, dtoIn)`.
+- Initialize `let uuAppErrorMap = {};` at the start of every method.
+- Start with dtoIn validation via `this.validator.validate("<entityCamelCase><UseCase>DtoInType", dtoIn)`.
+- Process validation result via `ValidationHelper.processValidationResult(dtoIn, validationResult, uuAppErrorMap, Warnings.<UseCase>.UnsupportedKeys.code, Errors.<UseCase>.InvalidDtoIn)`.
+- Always return dtoOut spread with `uuAppErrorMap`: `return { ...entity, uuAppErrorMap };
+
+## External Integration Boundaries
+
+- Never call external `AppClient` directly from ABL. Use a dedicated client component.
+
+## Scenario Comments (Mandatory)
+
+- Mark every logical step in every ABL method:
+  - `// HDS 1.`, `// HDS 2.`, ... for happy-day steps in execution order.
+  - `// A1`, `// A2`, ... immediately before the throw/return that represents an alternative scenario.
+- Keep numbering sequential; renumber when inserting or removing steps.
+- Do not remove existing HDS/A comments when editing a file.
