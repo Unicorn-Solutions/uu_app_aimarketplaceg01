@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "uu-app-defaults",
-      "source": "./plugins/uu-app-defaults",
+      "source": "uu-app-defaults",
       "description": "Default rules, skills, and MCP configuration for uuApp Framework projects",
       "keywords": ["uuApp", "UAF", "uuCmd", "uuScript", "conventions"],
       "category": "frameworks",
