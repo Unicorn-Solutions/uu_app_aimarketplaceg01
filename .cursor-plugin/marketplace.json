@@ -1,12 +1,11 @@
 {
-  "name": "cursor-plugin-starters",
+  "name": "uu-app-aimarketplace",
   "owner": {
-    "name": "Unicorn Universe",
-    "email": ""
+    "name": "Unicorn Universe"
   },
   "metadata": {
-    "description": "Starter marketplace template for Cursor plugins",
-    "version": "0.1.0",
+    "description": "Cursor plugin marketplace for uuApp Framework tools and conventions",
+    "version": "1.0.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
