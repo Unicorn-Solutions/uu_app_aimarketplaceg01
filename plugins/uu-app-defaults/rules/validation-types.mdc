@@ -1,0 +1,55 @@
+---
+description: Validation type file conventions, available types, naming, and modifiers for *-types.js files
+globs: **/app/api/validation_types/*-types.js
+alwaysApply: false
+---
+
+# Validation Types
+
+**CRITICAL**: Never use `module.exports` in validation type files. Just define variables.
+
+## Available Validation Types
+
+### Basic Data Types
+
+- `string()` / `string(max)` / `string(min, max)` / `string(/regExp/)` - plain text
+- `integer()` / `integer(max)` / `integer(min, max)` - whole numbers
+- `float()` / `float(decimalPlaces)` / `float(max, decimalPlaces)` / `float(min, max, decimalPlaces)` - decimal numbers
+- `number()` / `number(max)` / `number(min, max)` - any number
+- `boolean()` - true/false
+- `date()` / `date(format)` - date string (default `"%Y-%m-%d"`)
+- `time()` / `time(format)` - time string (default `"%H:%M"`)
+- `datetime()` / `datetime(format)` - datetime string (default `"%Y-%m-%dT%H:%M:%S.%L%Z"`)
+- `shape({key: type, ...})` - key-value structure
+- `array()` / `array(type)` / `array(type, min, max)` - array of items
+- `map(keyType, valueType)` / `map(keyType, valueType, min, max)` - key-value map
+
+### uuApp Data Types
+
+- `id()` - uuApp object identifier (24 or 32 hex chars)
+- `code()` - uuApp code (`/^[0-9a-zA-Z_]{3,64}$/`)
+- `uri()` / `uri(absolute)` - URI string (max 1000 chars)
+- `uuIdentity()` - uuIdentity identifier
+- `uu5String()` / `uu5String(max)` / `uu5String(min, max)` - UU5 rich-text content (use only when needed)
+- `uu5Json()` / `uu5Json(max)` - UU5 JSON string
+- `binary()` - binary value (base64 or raw stream)
+- `pageInfo()` - standard listing pagination shape
+- `email()` - email address
+- `objectCode()` - object code (`/^[a-zA-Z0-9_/\~&-.]{3,128}$/`)
+- `base64()` - base64 encoded string
+- `gps()` - GPS coordinates
+- `constant(value)` - exact value match
+
+### Functions
+
+- `any()` - any type (always passes)
+- `oneOf(["val0", "val1"])` - one of possible values or types
+- `stringSetOf(["val0", "val1"])` - space-separated list of unique values from given set
+
+Type naming convention: `{entityCamelCase}{UseCase}DtoInType` (e.g., `jokeCreateDtoInType`).
+
+Modifier reference:
+
+- `.isRequired()` - field is always required
+- `.isRequired("otherField")` - required if `otherField` is not provided (conditional)
+- `.isNotNull()` - if provided, cannot be null
