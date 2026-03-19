@@ -23,7 +23,6 @@ Default rules, skills, and MCP configuration for uuApp Framework (UAF) projects.
 | `uu-cmd` | Generate complete uuCmd endpoint implementations (ABL, DAO, controller, errors, warnings, validation types, config, tests) |
 | `uu-script` | Generate uuScript files for `*-uuscriptlib` projects |
 | `third-party-client` | Generate AppClient wrappers for calling external services |
-| `bookkit-download-skill` | Download binary files from a BookKit instance with interactive Plus4U authentication |
 
 ## Installation
 

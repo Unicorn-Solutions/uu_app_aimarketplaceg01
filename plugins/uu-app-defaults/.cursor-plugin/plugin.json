@@ -1,7 +1,7 @@
 {
   "name": "uu-app-defaults",
   "version": "1.0.0",
-  "description": "Default rules, skills, and MCP configuration for uuApp Framework (UAF) projects. Provides coding conventions for ABL, error, and validation-type files, plus generators for uuCmd endpoints, uuScript files, third-party clients, and BookKit downloads.",
+  "description": "Default rules, skills, and MCP configuration for uuApp Framework (UAF) projects. Provides coding conventions for ABL, error, and validation-type files, plus generators for uuCmd endpoints, uuScript files, and third-party clients.",
   "author": {
     "name": "Unicorn Universe"
   },
