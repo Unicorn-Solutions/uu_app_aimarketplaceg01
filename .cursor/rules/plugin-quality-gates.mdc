@@ -7,9 +7,18 @@ alwaysApply: true
 
 When creating or editing Cursor plugins:
 
-1. Ensure `.cursor-plugin/plugin.json` exists and includes a valid `name`.
-2. Keep paths relative and within the plugin directory (no absolute paths, no `..` traversal).
-3. Match declared component paths to real files and folders.
-4. Include YAML frontmatter for rules, skills, agents, and commands with required metadata.
-5. Keep plugin scope focused and document installation and usage in `README.md`.
-6. Save new plugins to `~/.cursor/plugins/local/<plugin-name>/` by default so they are immediately available to Cursor. Only use a different location when the user explicitly requests it.
+1. Ensure `.cursor-plugin/plugin.json` exists and includes a valid `name` (lowercase kebab-case, alphanumerics and hyphens, starts/ends with alphanumeric).
+2. The `author` field in `plugin.json` must be an **object** `{ "name": "..." }`, never a plain string.
+3. Keep paths relative and within the plugin directory (no absolute paths, no `..` traversal).
+4. Match declared component paths to real files and folders.
+5. Include YAML frontmatter for rules, skills, agents, and commands with required metadata.
+6. MCP config is auto-discovered from `mcp.json` at the plugin root. Use the `mcpServers` field in `plugin.json` only when overriding the default path or inlining config.
+7. Keep plugin scope focused and document installation and usage in `README.md`.
+8. Save new plugins to `~/.cursor/plugins/local/<plugin-name>/` by default so they are immediately available to Cursor. Only use a different location when the user explicitly requests it.
+
+For multi-plugin marketplace repos:
+
+9. Place `marketplace.json` at `.cursor-plugin/marketplace.json` in the repo root.
+10. `owner` is required with at least a `name` field.
+11. When `pluginRoot` is set (e.g. `"plugins"`), each plugin's `source` is relative to that root — use the directory name only (e.g. `"my-plugin"`), not the full path.
+12. Each plugin entry must have a corresponding directory with a valid `.cursor-plugin/plugin.json` inside it.
