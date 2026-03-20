@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "BusinessChatTerri": {
+    "uuKnowledgeBaseMcp": {
       "command": "npx",
       "args": [
         "-y",
