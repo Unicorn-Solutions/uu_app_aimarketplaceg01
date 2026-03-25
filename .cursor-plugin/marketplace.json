@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Cursor plugin marketplace for uuApp Framework tools and conventions",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
@@ -16,6 +16,14 @@
       "keywords": ["uuApp", "UAF", "uuCmd", "uuScript", "conventions"],
       "category": "frameworks",
       "tags": ["rules", "skills", "mcp"]
+    },
+    {
+      "name": "third-party-tools",
+      "source": "third-party-tools",
+      "description": "Curated collection of general-purpose skills, rules, agents, commands, and integrations from the broader Cursor and developer community",
+      "keywords": ["community", "third-party", "skills", "rules", "best-practices", "frameworks"],
+      "category": "community",
+      "tags": ["rules", "skills", "agents", "commands", "mcp", "hooks"]
     }
   ]
 }

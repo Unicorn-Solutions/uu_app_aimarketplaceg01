@@ -1,0 +1,17 @@
+{
+  "name": "third-party-tools",
+  "version": "0.1.0",
+  "description": "Curated collection of general-purpose skills, rules, agents, commands, and integrations from the broader Cursor and developer community. Covers popular frameworks, tools, and best practices.",
+  "author": {
+    "name": "Unicorn Universe"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "community",
+    "third-party",
+    "skills",
+    "rules",
+    "best-practices",
+    "frameworks"
+  ]
+}
