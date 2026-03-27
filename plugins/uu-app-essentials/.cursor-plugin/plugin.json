@@ -1,0 +1,18 @@
+{
+  "name": "uu-app-essentials",
+  "version": "0.1.0",
+  "description": "Essential skills for working with uuApp applications. Covers document editing, content management, and daily operations in uuManagementKit and other Plus4U tools. Designed for all uuApp users -- analysts, managers, architects, and developers alike.",
+  "author": {
+    "name": "Unicorn Universe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "uuApp",
+    "uuManagementKit",
+    "ECC",
+    "uu5",
+    "content",
+    "documents",
+    "non-developer"
+  ]
+}

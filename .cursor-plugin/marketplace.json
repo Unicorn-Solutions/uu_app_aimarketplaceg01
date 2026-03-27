@@ -10,12 +10,20 @@
   },
   "plugins": [
     {
-      "name": "uu-app-defaults",
-      "source": "uu-app-defaults",
-      "description": "Default rules, skills, and MCP configuration for uuApp Framework projects",
-      "keywords": ["uuApp", "UAF", "uuCmd", "uuScript", "conventions"],
+      "name": "uu-app-dev-toolkit",
+      "source": "uu-app-dev-toolkit",
+      "description": "Developer toolkit for uuApp Framework (UAF) projects. Coding conventions, endpoint generators, and MCP configuration for uuApp server development.",
+      "keywords": ["uuApp", "UAF", "uuCmd", "uuScript", "conventions", "developer", "toolkit"],
       "category": "frameworks",
       "tags": ["rules", "skills", "mcp"]
+    },
+    {
+      "name": "uu-app-essentials",
+      "source": "uu-app-essentials",
+      "description": "Essential skills for working with uuApp applications. Document editing, content management, and daily operations for all users.",
+      "keywords": ["uuApp", "uuManagementKit", "ECC", "uu5", "content", "documents"],
+      "category": "productivity",
+      "tags": ["skills", "mcp", "non-developer", "content-management"]
     },
     {
       "name": "third-party-tools",

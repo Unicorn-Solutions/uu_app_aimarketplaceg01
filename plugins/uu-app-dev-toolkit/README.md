@@ -1,6 +1,6 @@
-# uu-app-defaults
+# uu-app-dev-toolkit
 
-Default rules, skills, and MCP configuration for uuApp Framework (UAF) projects.
+Developer toolkit for uuApp Framework (UAF) projects.
 
 ## Components
 
@@ -26,4 +26,4 @@ Default rules, skills, and MCP configuration for uuApp Framework (UAF) projects.
 
 ## Installation
 
-This plugin is installed locally at `~/.cursor/plugins/local/uu-app-defaults/` and is automatically available in Cursor.
+This plugin is installed locally at `~/.cursor/plugins/local/uu-app-dev-toolkit/` and is automatically available in Cursor.

@@ -1,0 +1,18 @@
+{
+  "name": "uu-app-dev-toolkit",
+  "version": "1.0.0",
+  "description": "Developer toolkit for uuApp Framework (UAF) projects. Coding conventions for ABL, error, and validation-type files, plus generators for uuCmd endpoints, uuScript files, and third-party client wrappers.",
+  "author": {
+    "name": "Unicorn Universe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "uuApp",
+    "UAF",
+    "uuCmd",
+    "uuScript",
+    "conventions",
+    "developer",
+    "toolkit"
+  ]
+}
