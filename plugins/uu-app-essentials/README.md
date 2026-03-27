@@ -4,11 +4,6 @@ Essential skills for working with uuApp applications. Designed for all uuApp use
 
 ## Components
 
-### MCP Servers
-
-- **uuComponentCatalogue** -- uu5 component and icon search via `uu_aichat_mcputilityg01`.
-- **uuManagementKitEcc** -- ECC document operations (read, create, edit, restructure) via `uu_aichat_mcputilityg01`.
-
 ### Skills
 
 | Skill | Description |
